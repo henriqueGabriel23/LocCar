@@ -1,0 +1,112 @@
+// ajustando main
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// ajustando e estilizando a parte de atualização de perfil
+.perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
+    width: 1200px;
+    height: 520px;
+}
+// estilizando o titulo da área de atualizar o perfil
+.perfilTxt{
+    width: 103px;
+    height: 50px;
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #4A6D84;
+}
+
+// estilizando os inputs
+input{
+    margin-top: 30px;
+    width: 650px;
+    height: 50px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #CBDBE8;
+    border-radius: 10px;
+    border-color: #CBDBE8;
+    border: 1px solid rgb(173, 175, 211);
+    font-size: 17px;
+}
+//estilizando o botão de autualização 
+.buttomAtualizar{
+    margin-top: 30px;
+    width: 170px;
+    height: 50px;
+    background: #F55E5E;
+    box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
+    border-radius: 10px;
+    color: white;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 24px;
+    border: 0;
+}
+// ajustando e atualizando a área de usúarios
+.usuarios{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
+    width: 1200px;
+    height: 520px;
+}
+// estilizando o titulo da área de usuarios
+.usuariosTxt{
+    width: 481px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #4A6D84;
+}
+// estilizando a área de informações do usuario
+.informacoesClientes{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #4A6D84;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    width: 1098px;
+    height: 101px;
+    align-items: center;
+}
+// estilizando o botão de excluir
+.buttomExcluir{
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    width: 218px;
+    height: 50px;
+    color: #F55E5E;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    border: 0;
+}
