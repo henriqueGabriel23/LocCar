@@ -1,3 +1,4 @@
+// ajustando o header
 header{
     width: 100%;
     height: 200px;
@@ -6,8 +7,9 @@ header{
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+    justify-content: space-around;
 }
-
+// ajustando e estilizando o logo LocCar
 .loccarlogo{
     display: flex;
     align-items: center;
@@ -15,4 +17,35 @@ header{
     justify-content: space-around;
     width: 200px;
     background-color: white;
+}
+// ajustando o facil acesso da esquerda
+.acessoEsquerda{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #4A6D84;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+// ajustando e estilizando o facil acesso da direita
+.acessoDireita{
+    width: 300px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #4A6D84;
+    display: flex;
+    justify-content: space-between;
+}
+// estilizando quando cursor estiver em cima de um facil acesso 
+.facilAcesso:hover{
+    border-radius: 5px;
+    color: black;
+    box-shadow: 3px 3px 13px #c4c4c4, -3px -3px 13px white;
+    cursor: pointer;
 }

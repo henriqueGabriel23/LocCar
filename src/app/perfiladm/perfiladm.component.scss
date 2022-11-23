@@ -5,7 +5,6 @@ main{
     flex-direction: column;
     align-items: center;
 }
-
 // ajustando e estilizando a parte de atualização de perfil
 .perfil{
     display: flex;
@@ -54,6 +53,11 @@ input{
     line-height: 30px;
     font-size: 24px;
     border: 0;
+}
+// estilizando quando o cursor estiver em cima do botão atualizar
+.buttomAtualizar:hover{
+    background-color: #c76060;
+    cursor: pointer;
 }
 // ajustando e atualizando a área de usúarios
 .usuarios{
@@ -109,4 +113,10 @@ input{
     font-size: 24px;
     line-height: 30px;
     border: 0;
+}
+// estilizando quando o cursor estiver em cima do botão excluir
+.buttomExcluir:hover{
+    background-color: #c76060;
+    color: white;
+    cursor: pointer;
 }
