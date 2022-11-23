@@ -37,6 +37,13 @@ input{
     border-color: #CBDBE8;
     border: 1px solid rgb(173, 175, 211);
     font-size: 17px;
+    outline: none;
+}
+// fazendo profundidado quando curssor esta em cima
+.input:focus{
+    background: #E9EEF7;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
+    border-radius: 10px;
 }
 //estilizando o botão de autualização 
 .buttomAtualizar{
