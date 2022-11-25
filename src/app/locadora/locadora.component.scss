@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+main {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.cadastro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 456px;
+    max-width: 1200px;
+    box-shadow: -3px -3px 13px 0px #FFFFFF;
+    box-shadow: 3px 3px 13px 0px #CBDBE8;
+    margin: auto;
+}
+
+.inpults {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 456px;
+    width: 1200px;
+    margin-top: 40px;
+}
+
+.inpult {
+    height: hug(50px);
+    width: 650px;
+    left: 395px;
+    top: 484px;
+    border-radius: 10px;
+    padding: 10px 12px 10px 12px;
+    margin-top: 30px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border: 0;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.tel_e_botao {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 670px;
+
+}
+
+.inpult_tel {
+    height: hug(50px);
+    width: 449px;
+    left: 395px;
+    top: 646px;
+    border-radius: 10px;
+    padding: 10px 12px 10px 12px;
+    background: #E9EEF7;
+    border: 0;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+
+}
+
+.botao_de_cadastro {
+    height: hug (50px);
+    width: 170px;
+    left: 875px;
+    top: 646px;
+    border-radius: 10px;
+    padding: 9px 33px 9px 33px;
+    background: #F55E5E;
+    color: white;
+    border: 0;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.botao_de_cadastro:hover {
+    background-color: #c76060;
+    cursor: pointer;
+}
+
+.locadora {
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #4A6D84;
+}
+
+.cadastradas {
+    margin-top: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: -3px -3px 13px 0px #ffffff;
+    box-shadow: 3px 3px 13px 0px #cbdbe8;
+}
+
+
+.editar_excluir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 101px;
+    width: 1098px;
+    border-radius: 10px;
+    padding: 10px 12px 10px 12px;
+    box-shadow: -3px -3px 5px 0px #FFFFFF;
+    box-shadow: 3px 3px 7px 0px #CBDBE8;
+    margin-top: 40px;
+}
+
+.tamanho {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #4A6D84;
+
+}
+
+.rua {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #4A6D84;
+    width: 182px;
+}
+
+.editar {
+    height: 50px;
+    width: 218px;
+    border-radius: 10px;
+    padding: 9px 33px 9px 33px;
+    box-shadow: -3px -3px 5px 0px #FFFFFF;
+    box-shadow: 3px 3px 7px 0px #CBDBE8;
+    background-color: #E9EEF7;
+    border: 0;
+    color: #39A9F0;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.excluir {
+    height: 50px;
+    box-shadow: -3px -3px 5px 0px #FFFFFF;
+    box-shadow: 3px 3px 7px 0px #CBDBE8;
+    width: 218px;
+    border-radius: 10px;
+    background-color: #E9EEF7;
+    padding: 9px 33px 9px 33px;
+    border: 0;
+    color: #F55E5E;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.editar:hover {
+    background: #9db6c4;
+    color: white;
+    cursor: pointer;
+}
+
+.excluir:hover {
+    background-color: #c76060;
+    color: white;
+    cursor: pointer;
+}

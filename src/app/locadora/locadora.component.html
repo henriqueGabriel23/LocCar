@@ -1,0 +1,29 @@
+<!-- Parte de cadastro -->
+<main>
+    <form [formGroup]="form">
+        <div class="cadastro">
+            <p class="locadora">Locadora</p>
+            <div class="inpults">
+                <input type="text" placeholder="Locadora" formControlName="nome" class="inpult">
+                <input type="text" placeholder="Endereço" formControlName="endereco" class="inpult">
+                <div class="tel_e_botao">
+                    <input type="text" placeholder="Telefone" formControlName="telefone" class="inpult_tel">
+                    <button type="submit" class="botao_de_cadastro" *ngIf="Cadastro" (click)="CadastrarLocadora()">Cadastar</button>
+                    <button type="submit" class="botao_de_cadastro" *ngIf="!Cadastro" (click)="EditarLocadoras()">Editar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="cadastradas">
+        <p class="locadora">Locadoras cadastradas</p>
+        <div class="editar_excluir" *ngFor="let item of listaLocadoras ; index as i; ">
+            <p class="tamanho">{{item.nome}}</p>
+            <p class="rua">{{item.endereco}}
+                {{item.telefone}}
+            </p>
+            <button type="submit" class="editar" (click)="PuxarDadosLocadora(item)">Editar</button>
+            <button type="submit" class="excluir" (click)="DeletarLocadora(item.id)">Excluir</button>
+        </div>
+    </div>
+</main>
