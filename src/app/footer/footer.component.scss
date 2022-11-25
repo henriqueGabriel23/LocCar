@@ -1,0 +1,63 @@
+footer{
+    margin-top: 40px;
+    width: 100%;
+    height: 200px;
+    background-color: #232323;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    font-family:'Quicksand';
+}
+
+.contato{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.txtBottom{
+    margin-bottom: 20px;
+}
+
+.politica{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #CBDBE8;
+}
+
+.txtContato{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+// informações
+.informacoes{
+    margin-top: 20px;
+    width: 350px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #CBDBE8;
+    display: flex;
+    justify-content: space-between;
+}
+
+// redes sociais
+.redesSociais{
+    margin-top: 20px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.eduSync{
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    position: absolute;
+    align-self: flex-end;
+    margin-bottom: 30px;
+}

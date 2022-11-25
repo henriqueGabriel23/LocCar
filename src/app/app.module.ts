@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
 import { CarrosComponent } from './carros/carros.component';
+import { PerfiladmComponent } from './perfiladm/perfiladm.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CarrosComponent
+    CarrosComponent,
+    PerfiladmComponent
   ],
   imports: [
     BrowserModule,
