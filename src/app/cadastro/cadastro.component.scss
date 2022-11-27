@@ -12,17 +12,16 @@ main{
     margin-top: 60px;
 }
 // fazendo a estilização do card onde fica os inputs e botão
-.borda{
+
+// centralizando inputs
+form{
     background: #E9EEF7;
     box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
     border-radius: 10px;
     width: 800px;
     height: 400px;
     margin: auto;
-    margin-top: 100px;   
-}
-// centralizando inputs
-form{
+    margin-top: 100px;  
     text-align: center;
 }
 // ajuste e estilização dos inputs

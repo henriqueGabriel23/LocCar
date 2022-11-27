@@ -7,14 +7,12 @@
         </div>
     </div>
     <!-- criando área dos inputs -->
-    <div class="borda">
-        <div>
-            <form>
-                <input type="text" placeholder="Nome completo">
-                <input type="text" placeholder="(11) 9999-9090">
-                <input type="email" placeholder="exemplo@gmail.com">
-                <a><button>Cadastrar</button></a>
-            </form>
-        </div>
+    <div>
+        <form [formGroup]="form">
+            <input type="text" placeholder="Nome completo">
+            <input type="text" placeholder="(11) 9999-9090">
+            <input type="email" placeholder="exemplo@gmail.com">
+            <a><button>Cadastrar</button></a>
+        </form>
     </div>
 </main>
