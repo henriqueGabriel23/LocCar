@@ -1,16 +1,17 @@
+// ajstando main
 main{
     max-width: 1440px;
     width: 100%;
     margin: auto;
 }
-
+// ajustando imagem da logo
 .logo_carro{
     height: 100%;
     display: flex;
     justify-content: center;
     margin-top: 60px;
 }
-
+// fazendo a estilização do card onde fica os inputs e botão
 .borda{
     background: #E9EEF7;
     box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
@@ -21,10 +22,11 @@ main{
     margin-top: 100px;
     margin-bottom: 210px;
 }
-.informacoes_cadastro{
+// centralizando inputs
+form{
     text-align: center;
 }
-
+// ajuste e estilização dos inputs
 input{
     font-family: 'Quicksand';
     margin-top: 40px;
@@ -37,6 +39,7 @@ input{
     color:  #688699;
     font-size: 24px;
     border: 0px;
+    outline: none;
 }
 input:focus{
     background: #E9EEF7;
