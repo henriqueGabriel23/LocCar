@@ -19,7 +19,7 @@ main{
     height: 400px;
     margin: auto;
     margin-top: 100px;
-    
+    margin-bottom: 210px;
 }
 .informacoes_cadastro{
     text-align: center;
@@ -38,6 +38,13 @@ input{
     font-size: 24px;
     border: 0px;
 }
+input:focus{
+    background: #E9EEF7;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
 
 button{
     background: #F55E5E;
@@ -50,4 +57,9 @@ button{
     font-size: 24px;
     font-family: 'Quicksand';
     border: 0;
+}
+button:focus{
+    background: #F55E5E;
+box-shadow: 4px 4px 4px #CBDBE8, inset 3px 3px 10px rgba(131, 48, 48, 0.69);
+border-radius: 10px;
 }
