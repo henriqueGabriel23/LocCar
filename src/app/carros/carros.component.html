@@ -2,124 +2,47 @@
 <main>
     <div class="form">
         <p class="titulo">Carros</p>
-        <form>
-            <input type="text" placeholder="Nome do carro">
-            <select name="" id="">
-                <option value="r">Selecione o tipo</option>
+        <form [formGroup]="form" >
+            <input type="text" placeholder="Nome do carro" formControlName="carro" required>
+            <select formControlName="tipo">
+                <option>Selecione o tipo</option>
             </select>
             <div class="flex">
-                <input type="text" placeholder="Portas" class="inputMenor">
-                <input type="text" placeholder="Num de Pessoas" class="inputMenor">
+                <input type="text" placeholder="Portas" class="inputMenor" formControlName="portas">
+                <input type="text" placeholder="Num de Pessoas" class="inputMenor" formControlName="nPessoas">
             </div>
             <div class="flex">
-                <select name="fdsgsg" value="refgggg" id="" class="selectMenor">
+                <select name="fdsgsg" value="refgggg" id="" class="selectMenor" formControlName="locadora">
                     <option>Selecione a locadora</option>
                 </select>
-                <button class="cadastrar">Cadastrar</button>
+                <button class="cadastrar" (submit)="salvarDadosCarros()">Cadastrar</button>
             </div>
         </form>
     </div>
     <div class="todosCards">
-         <p class="tituloCard">Popular</p>
-         <div class="linha"></div>
+        <div class="class1"*ngFor="let tipo of listaTipoCarros ; index as i;">
+        <p class="tituloCard">{{tipo.nome}}</p>
+        <div class="linha"></div>
         <div class="cards">
-           
-            <div class="card">
+
+            <div class="card"*ngFor="let carro of filterCarros(tipo.nome); index as i;">
                 <img src="../../assets/car3 2.png">
                 <div class="maxWidth">
-                    <p class="subtitulo">Fiat Uno 1.0</p>
+                    <p class="subtitulo">{{carro.nome}}</p>
                     <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
                     <button class="editar">Editar</button>
                     <button class="excluir">Excluir</button>
                 </div>
             </div>
-            <div class="card">
-                <img src="../../assets/car3 2.png">
-                <div class="maxWidth">
-                    <p class="subtitulo">Fiat Uno 1.0</p>
-                    <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
-                    <button class="editar">Editar</button>
-                    <button class="excluir">Excluir</button>
-                </div>
             </div>
-            <div class="card">
-                <img src="../../assets/car3 2.png">
-                <div class="maxWidth">
-                    <p class="subtitulo">Fiat Uno 1.0</p>
-                    <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
-                    <button class="editar">Editar</button>
-                    <button class="excluir">Excluir</button>
-                </div>
-            </div>
+            
+
+
+
+
+
 
         </div>
-         <p class="tituloCard">Sedan</p>
-         <div class="linha"></div>
-        <div class="cards">
-           
-            <div class="card">
-                <img src="../../assets/car3 2.png">
-                <div class="maxWidth">
-                    <p class="subtitulo">Fiat Uno 1.0</p>
-                    <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
-                    <button class="editar">Editar</button>
-                    <button class="excluir">Excluir</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../assets/car3 2.png">
-                <div class="maxWidth">
-                    <p class="subtitulo">Fiat Uno 1.0</p>
-                    <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
-                    <button class="editar">Editar</button>
-                    <button class="excluir">Excluir</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../assets/car3 2.png">
-                <div class="maxWidth">
-                    <p class="subtitulo">Fiat Uno 1.0</p>
-                    <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
-                    <button class="editar">Editar</button>
-                    <button class="excluir">Excluir</button>
-                </div>
-            </div>
-
-        </div>
-         <p class="tituloCard">Luxo</p>
-         <div class="linha"></div>
-        <div class="cards">
-           
-            <div class="card">
-                <img src="../../assets/car3 2.png">
-                <div class="maxWidth">
-                    <p class="subtitulo">Fiat Uno 1.0</p>
-                    <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
-                    <button class="editar">Editar</button>
-                    <button class="excluir">Excluir</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../assets/car3 2.png">
-                <div class="maxWidth">
-                    <p class="subtitulo">Fiat Uno 1.0</p>
-                    <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
-                    <button class="editar">Editar</button>
-                    <button class="excluir">Excluir</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../assets/car3 2.png">
-                <div class="maxWidth">
-                    <p class="subtitulo">Fiat Uno 1.0</p>
-                    <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
-                    <button class="editar">Editar</button>
-                    <button class="excluir">Excluir</button>
-                </div>
-            </div>
-
-        </div>
-
 
     </div>
 
