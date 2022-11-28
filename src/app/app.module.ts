@@ -8,9 +8,10 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { HomeComponent } from './home/home.component';
 import { CarrosComponent } from './carros/carros.component';
 import { PerfiladmComponent } from './perfiladm/perfiladm.component';
-import { HeaderComponent } from "./header/header.component";
-import { FooterComponent } from "./footer/footer.component";
-
+import { HttpClientModule } from "@angular/common/http'
+import { ReactiveFormsModule } from  '@angular/forms";
+import { LocadoraComponent } from "./locadora/locadora.component";
+ 
 @NgModule({
     declarations: [
         AppComponent,
@@ -18,15 +19,17 @@ import { FooterComponent } from "./footer/footer.component";
         HomeComponent,
         CarrosComponent,
         PerfiladmComponent,
-        HeaderComponent,
-        FooterComponent
+        LocadoraComponent,
+         
     ],
     providers: [],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        
+    HttpClientModule,
+    ReactiveFormsModule,
+         
     ]
 })
 export class AppModule { }
