@@ -3,8 +3,7 @@
     {
       "id": 1,
       "nome": "Paulo",
-      "email": "paulo@email.com",
-      "foto": "avatar.png"
+      "email": "paulo@email.com"
     },
     {
       "id": 2,
@@ -30,7 +29,7 @@
       "portas": 4,
       "npessoas": 5,
       "locadoraId": 1,
-      "tipoId" : 2
+      "tipoId": 2
     },
     {
       "id": 2,
@@ -38,7 +37,7 @@
       "portas": 4,
       "npessoas": 5,
       "locadoraId": 1,
-      "tipoId" : 2
+      "tipoId": 2
     },
     {
       "nome": "Gol",
@@ -46,7 +45,7 @@
       "npessoas": "4",
       "locadoraId": "1",
       "id": 3,
-      "tipoId" : 1
+      "tipoId": 1
     }
   ],
   "reservas": [

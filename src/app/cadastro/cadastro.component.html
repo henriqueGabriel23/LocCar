@@ -3,16 +3,21 @@
     <!-- criando parte da logo -->
     <div class="alteracoes_logo">
         <div class="logo_carro">
-            <img src="../../assets/img/Group 1.png">
+            <img src="../../assets/cadastroIMG/Group 1.png">
         </div>
     </div>
     <!-- criando área dos inputs -->
     <div>
+        <!-- declarando formgroup -->
         <form [formGroup]="form">
-            <input type="text" placeholder="Nome completo">
-            <input type="text" placeholder="(11) 9999-9090">
-            <input type="email" placeholder="exemplo@gmail.com">
-            <a><button>Cadastrar</button></a>
+            <!-- input od nome -->
+            <input type="text" placeholder="Nome completo" formControlName="nome">
+            <!-- input do telefone -->
+            <input type="text" placeholder="(11) 9999-9090" formControlName="numero">
+            <!-- input do email -->
+            <input type="email" placeholder="exemplo@gmail.com" formControlName="email">
+            <!-- botão de cadastrar -->
+            <a><button (click)="postarUsuario()">Cadastrar</button></a>
         </form>
     </div>
 </main>
