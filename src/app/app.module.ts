@@ -12,8 +12,6 @@ import { HomeComponent } from './home/home.component';
 import { CarrosComponent } from './carros/carros.component';
 import { CarrosClienteComponent } from './carros-cliente/carros-cliente.component';
 import { PerfiladmComponent } from './perfiladm/perfiladm.component';
-import { HttpClientModule } from "@angular/common/http"
-import { ReactiveFormsModule } from '@angular/forms';
 import { LocadoraComponent } from "./locadora/locadora.component";
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,7 +22,7 @@ import { HeaderComponent } from './header/header.component';
         CadastroComponent,
         HomeComponent,
         CarrosComponent,
-    CarrosClienteComponent,
+        CarrosClienteComponent,
         PerfiladmComponent,
         LocadoraComponent,
         FooterComponent,
@@ -35,8 +33,8 @@ import { HeaderComponent } from './header/header.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
+        ReactiveFormsModule,
+        HttpClientModule,
         HttpClientModule,
         ReactiveFormsModule,
 
