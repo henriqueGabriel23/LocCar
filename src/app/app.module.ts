@@ -1,21 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http'
+
 
 import { HomeComponent } from './home/home.component';
 import { CarrosComponent } from './carros/carros.component';
+import { CarrosClienteComponent } from './carros-cliente/carros-cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CarrosComponent
+    CarrosComponent,
+    CarrosClienteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
