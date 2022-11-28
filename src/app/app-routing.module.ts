@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CarrosComponent } from './carros/carros.component';
 import { HomeComponent } from './home/home.component';
+import { LocadoraComponent } from './locadora/locadora.component';
 import { PerfiladmComponent } from './perfiladm/perfiladm.component';
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'cadastro', component:CadastroComponent},
   {path:'carros', component:CarrosComponent},
-  {path:'perfil', component:PerfiladmComponent}
+  {path:'perfil', component:PerfiladmComponent},
+  {path:'Locadora', component:LocadoraComponent}
 
 ];
 @NgModule({

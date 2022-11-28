@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { LOcadoraService } from '../Services/l-ocadora.service';
+import { LOcadoraService } from '../services/l-ocadora.service';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
