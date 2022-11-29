@@ -1,0 +1,124 @@
+input {
+    background: #E9EEF7;
+    background-color: #E9EEF7;
+
+}
+
+h1 {
+    color: #4A6D84;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// pai do primeiro  input 
+.carro {
+    background: #E9EEF7;
+    border-radius: 10px;
+    height: 40px;
+    border-color: #CBDBE8;
+    display: flex;
+    justify-content: center;
+}
+
+// esse é o filho, o primeiro input
+.carro_input{
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    width: 600px;
+    height: 40px;
+    border-color: #CBDBE8;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+// separação dos inpunts
+.hora_data_devolucao {
+    display: flex;
+
+}
+
+// estilização dos inpunts de hora, data e devoucao 
+// div pai dos inputs
+.hora_data_devolucao {
+    background: #E9EEF7;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    border-color: #CBDBE8;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.hora_data_devolucao_input{
+    width: 200px;
+    height: 30px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    border-color: #CBDBE8;
+    display: flex;
+   justify-content: space-around;
+
+}
+
+.botao_locadora{
+        display: flex;
+        justify-content: center;
+}
+
+
+.locadora {
+    width: 456px;
+    height: 50px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-color: #E9EEF7;
+    color: #39A9F0;
+    font-family: 'Quicksand', sans-serif;
+    
+    
+}
+
+button {
+    background: #F55E5E;
+    box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
+    border-radius: 10px;
+    width: 170px;
+    height: 50px;
+    border-color: #F55E5E;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+
+
+.botao_cadastra:hover {
+    cursor: pointer;
+    background-color: rgb(229, 247, 247);
+    color: black;
+    border: black solid 1px;
+}
+
+// cor de fundo 
+.tudo_da_parte_de_cima {
+    background-color: #E9EEF7;
+    height:400px;
+    width: 810px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.segunda_parte{
+    display: flex;
+    flex-direction: column;
+}
+

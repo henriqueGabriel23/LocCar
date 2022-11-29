@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+p {
+    font-family: 'Quicksand';
+    font-size: 24px;
+}
+
+.botao_login {
+    background: #F55E5E;
+    border-radius: 10px;
+    width: 170px;
+    height: 50px;
+    color: white;
+    border-color: #F55E5E;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div {
+    background: #E9EEF7;
+    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
+    border-radius: 10px;
+    width: 800px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
