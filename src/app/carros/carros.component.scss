@@ -48,9 +48,10 @@ select {
     order: 0;
     flex-grow: 0;
 }
-option::placeholder{
+
+option::placeholder {
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 
 select:focus {
@@ -125,6 +126,7 @@ input::placeholder {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
+    font-size: 24px;
 
     line-height: 30px;
     /* identical to box height */
@@ -142,10 +144,19 @@ input::placeholder {
 
 }
 
-.inputMenor {
+.inputMenor,
+.inputMenorPortas {
     width: 315px;
     height: 50px;
     margin-top: 20px;
+}
+
+.inputMenorPortas::placeholder {
+    width: 80px;
+}
+
+.inputMenor::placeholder {
+    width: 200px;
 }
 
 .cadastrar {
@@ -160,8 +171,10 @@ input::placeholder {
     box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
     border-radius: 10px;
 }
-.cadastrar:hover{
-    background: #c76060;;
+
+.cadastrar:hover {
+    background: #c76060;
+    ;
 }
 
 .card {
@@ -174,10 +187,11 @@ input::placeholder {
 
     margin-top: 20px;
 }
-.cards{
+
+.cards {
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 .todosCards {
@@ -226,13 +240,14 @@ input::placeholder {
     color: #39A9F0;
     margin-top: 15px;
 }
-.editar:focus{
+
+.editar:focus {
 
     background: #E9EEF7;
     box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
     border-radius: 10px;
     border: none;
-   
+
 }
 
 .excluir {
@@ -246,7 +261,8 @@ input::placeholder {
     color: #F55E5E;
     margin-top: 15px;
 }
-.excluir:focus{
+
+.excluir:focus {
     background: #E9EEF7;
     box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
     border-radius: 10px;

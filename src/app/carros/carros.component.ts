@@ -16,7 +16,7 @@ listaTipoCarros!: any[]
     private salvarCarroService: CarrosService) {}
   ngOnInit(): void {
     this.form = this.fb.group({
-      nome: new FormControl(''),
+      nomeCarro: new FormControl(''),
       tipo: new FormControl(''),
       portas: new FormControl(''),
       nPessoas: new FormControl(''),
@@ -62,7 +62,7 @@ listaTipoCarros!: any[]
   salvarDadosCarros() {
  
    const id = (this.carros[(this.carros.length) - 1].id)+1
-   const nome = this.form.controls['carro'].value
+   const nome = this.form.controls['nomeCarro'].value
    const tipoCarro = this.form.controls['tipo'].value
    const portas = this.form.controls['portas'].value
    const nPessoas = this.form.controls['nPessoas'].value
@@ -75,7 +75,6 @@ listaTipoCarros!: any[]
      portas:portas,
      nPessoas:nPessoas,
      locadora:locadora
-
    }
    console.log(carro)
 
@@ -94,6 +93,17 @@ listaTipoCarros!: any[]
      })
 
  }
+ deletarDadosCarros(id: number) {
+  this.salvarCarroService.deletarCarro(id).subscribe({
+    next: (dados: any) => {
+      console.log(dados);
+      this.lerDadosCarros()
+    },
+    error: (erro: any) => {
+      console.log('nao deu bom :(' + erro);
+    }
+  })
+}
  
  
 }
