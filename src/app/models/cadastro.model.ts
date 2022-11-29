@@ -1,8 +1,10 @@
 export interface CriarCarros{
     id:number
     nome:string
-    tipoCarro:any
+    tipoCarro?:any
+    tipoCarroId:number
     portas:number
     nPessoas:number
-    locadora:string
+    locadora?:any
+    locadoraId:number
 }

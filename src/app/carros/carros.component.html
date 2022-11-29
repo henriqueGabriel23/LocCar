@@ -4,8 +4,9 @@
         <p class="titulo">Carros</p>
         <form [formGroup]="form" >
             <input type="text" placeholder="Nome do carro" formControlName="nomeCarro" required>
-            <select formControlName="tipo">
-                <option>Selecione o tipo</option>
+            <select formControlName="tipo" >
+                <option value="0"  disabled>Selecione o tipo</option>
+                <option [value]="tipo.id" *ngFor="let tipo of listaTipoCarros ; index as i;">{{tipo.nome}}</option>
             </select>
             <div class="flex">
                 <input type="text" placeholder="Portas" class="inputMenorPortas" formControlName="portas">
@@ -13,9 +14,11 @@
             </div>
             <div class="flex">
                 <select class="selectMenor" formControlName="locadora">
-                    <option value="1"></option>
+                    <option value="0" disabled>Selecione a locadora</option>
+                    <option  *ngFor="let locadora of listaLocadora ; index as i;">{{locadora.nome}}</option>
                 </select>
-                <button class="cadastrar" (submit)="salvarDadosCarros()">Cadastrar</button>
+                <button class="cadastrar" (click)="salvarDadosCarros()" *ngIf="!verificarEditar">Cadastrar</button>
+                <button  class="submitEditar" (click)="editarDadosCarros()" *ngIf="verificarEditar">Editar</button>
             </div>
         </form>
     </div>
@@ -25,12 +28,12 @@
         <div class="linha"></div>
         <div class="cards">
 
-            <div class="card"*ngFor="let carro of filterCarros(tipo.nome); index as i;">
+            <div class="card" *ngFor="let carro of filterCarros(tipo.nome); index as i;">
                 <img src="../../assets/car3 2.png">
                 <div class="maxWidth">
                     <p class="subtitulo">{{carro.nome}}</p>
                     <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
-                    <button class="editar">Editar</button>
+                    <button class="editar" (click)="EditarCarros2(carro)">Editar</button>
                     <button class="excluir" (click)="deletarDadosCarros(carro.id)">Excluir</button>
                 </div>
             </div>
