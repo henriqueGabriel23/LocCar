@@ -12,6 +12,11 @@ export class CarrosComponent {
 form!:FormGroup
 carros!: CriarCarros[]
 listaTipoCarros!: any[]
+listaLocadora!: any[]
+selected:any = "0"
+carroId!:number
+verificarEditar:boolean = false
+
   constructor(  private fb: FormBuilder,
     private salvarCarroService: CarrosService) {}
   ngOnInit(): void {
@@ -22,8 +27,11 @@ listaTipoCarros!: any[]
       nPessoas: new FormControl(''),
       locadora: new FormControl('')
     })
+    this.form.controls['tipo'].setValue('0')
+    this.form.controls['locadora'].setValue('0')
    this.lerDadosCarros()
    this.lerDadosTipoCarros()
+   this.lerDadosLocadora()
   }
   lerDadosCarros(){
     this.salvarCarroService.lerCarros().subscribe({
@@ -53,28 +61,41 @@ listaTipoCarros!: any[]
      }
    });
   }
-  filterCarros(TipoCarro:any){
-    console.log(TipoCarro);
+  lerDadosLocadora(){
+    this.salvarCarroService.lerLocadora().subscribe({
+     next: (locadora:any[]) => {
+      this.listaLocadora = locadora
+
+       console.log(locadora);
+       
+     },
+     error: (error:any) => {
+       console.log('erro locadora' + error);
+
+     }
+   });
+  }
+  filterCarros(tipoCarro:any){
     
-    return this.carros.filter(c=>c.tipoCarro.nome === TipoCarro)
+    return this.carros.filter(c => c.tipoCarro.nome === tipoCarro)
     
   }
   salvarDadosCarros() {
  
    const id = (this.carros[(this.carros.length) - 1].id)+1
    const nome = this.form.controls['nomeCarro'].value
-   const tipoCarro = this.form.controls['tipo'].value
+   const tipoCarroId = this.form.controls['tipo'].value
    const portas = this.form.controls['portas'].value
    const nPessoas = this.form.controls['nPessoas'].value
-   const locadora = this.form.controls['locadora'].value
+   const locadoraId = this.form.controls['locadora'].value
  
    const carro:CriarCarros = { 
      id:id,
      nome:nome, 
-     tipoCarro:tipoCarro, 
+     tipoCarroId:tipoCarroId, 
      portas:portas,
      nPessoas:nPessoas,
-     locadora:locadora
+     locadoraId:locadoraId
    }
    console.log(carro)
 
@@ -82,12 +103,14 @@ listaTipoCarros!: any[]
 
      this.salvarCarroService.salvarCarro(carro).subscribe({
        next:()=>{
-         console.log('salvou');
+         console.log('salvouum carro');
          this.lerDadosCarros()
+         this.lerDadosLocadora()
+         this.lerDadosTipoCarros()
          
        },
-       error:()=>{
-         console.log('erro salvarcarro');
+       error:(error:any)=>{
+         console.log('erro salvarcarro' + error);
          
        }
      })
@@ -104,6 +127,45 @@ listaTipoCarros!: any[]
     }
   })
 }
- 
+editarDadosCarros(){
+  const id = this.carroId
+  const nome = this.form.controls['nomeCarro'].value
+  const tipoCarroId = this.form.controls['tipo'].value
+  const portas = this.form.controls['portas'].value
+  const nPessoas = this.form.controls['nPessoas'].value
+  const locadoraId = this.form.controls['locadora'].value
+
+  const carro:CriarCarros = { 
+    id:id,
+    nome:nome, 
+    tipoCarroId:tipoCarroId, 
+    portas:portas,
+    nPessoas:nPessoas,
+    locadoraId:locadoraId
+  }
+    this.salvarCarroService.editarUsuario(carro).subscribe({
+      next:()=>{
+        console.log('deu certo');
+        this.lerDadosCarros()
+      },
+      error:(error:any)=>{
+        console.log('erro editar');
+        
+      }
+    })
+    this.verificarEditar = false
+    this.form.reset()
+   }
+
+   EditarCarros2(itemCarros:CriarCarros){
+    this.carroId = itemCarros.id
+    this.form.controls["nomeCarro"].setValue(itemCarros.nome)
+    this.form.controls["tipo"].setValue(itemCarros.tipoCarroId)
+    this.form.controls["portas"].setValue(itemCarros.portas)
+    this.form.controls["nPessoas"].setValue(itemCarros.nPessoas)
+    this.form.controls["locadora"].setValue(itemCarros.locadoraId)
+    this.verificarEditar = true
+       
+  }
  
 }
