@@ -9,8 +9,8 @@ import { CriarCarros } from '../models/cadastro.model';
 export class CarrosService {
   private listaCarros!:CriarCarros[]
 
-  private url = 'http://localhost:3000/carros?_expand=tipoCarro'
-  private urlTipo = 'http://localhost:3000/tipoCarros'
+  private url = 'https://servidorcarros.glitch.me//carros?_expand=tipoCarro'
+  private urlTipo = 'https://servidorcarros.glitch.me//tipoCarros'
   
   constructor(private httpClient:HttpClient) {
     this.listaCarros = [];
@@ -24,6 +24,10 @@ export class CarrosService {
    salvarCarro(carro:CriarCarros):Observable<CriarCarros[]>{
     return this.httpClient.post<CriarCarros[]>(this.url, carro);
    }
+   deletarCarro(carroId : number):Observable<any>{
+    return this.httpClient.delete(`${this.url}/${carroId}`)
+
+  }
    
    
 }

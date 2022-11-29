@@ -2,17 +2,17 @@
     <div class="form">
         <p class="titulo">Carros</p>
         <form [formGroup]="form" >
-            <input type="text" placeholder="Nome do carro" formControlName="carro" required>
+            <input type="text" placeholder="Nome do carro" formControlName="nomeCarro" required>
             <select formControlName="tipo">
                 <option>Selecione o tipo</option>
             </select>
             <div class="flex">
-                <input type="text" placeholder="Portas" class="inputMenor" formControlName="portas">
+                <input type="text" placeholder="Portas" class="inputMenorPortas" formControlName="portas">
                 <input type="text" placeholder="Num de Pessoas" class="inputMenor" formControlName="nPessoas">
             </div>
             <div class="flex">
-                <select name="fdsgsg" value="refgggg" id="" class="selectMenor" formControlName="locadora">
-                    <option>Selecione a locadora</option>
+                <select class="selectMenor" formControlName="locadora">
+                    <option value="1"></option>
                 </select>
                 <button class="cadastrar" (submit)="salvarDadosCarros()">Cadastrar</button>
             </div>
@@ -30,7 +30,7 @@
                     <p class="subtitulo">{{carro.nome}}</p>
                     <p class="text">Faça a sua reserva e garata a locação do automóvel.</p>
                     <button class="editar">Editar</button>
-                    <button class="excluir">Excluir</button>
+                    <button class="excluir" (click)="deletarDadosCarros(carro.id)">Excluir</button>
                 </div>
             </div>
             </div>
