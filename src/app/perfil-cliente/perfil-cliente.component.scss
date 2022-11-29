@@ -27,17 +27,24 @@ h3{
     align-items: center;
 }
 
-input{
-    margin-top: 13px;
+input {
     width: 650px;
     height: 50px;
     background: #E9EEF7;
     box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
     border-radius: 10px;
-    border: 0;
+    border: none;
+    margin-top: 20px;
     color: #4A6D84;
     font-size: 24px;
+}
 
+input:focus {
+    background: #E9EEF7;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
+    border-radius: 10px;
+    border: none;
+    outline: none;
 }
 
 .botos_espacamento{
@@ -56,7 +63,6 @@ input{
     border: 0;
     color: #FFFFFF;
     font-size: 24px;
-
 }
 
 .excluir_cadastro{
