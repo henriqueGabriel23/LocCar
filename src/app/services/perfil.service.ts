@@ -9,7 +9,7 @@ import { usuarioModel } from '../models/loccar.model';
 })
 export class PerfilService {
   // guardando a rota da url
-  url: string = 'http://localhost:3000/usuario'
+  url: string = 'https://servidorcarros.glitch.me/usuarios'
 
     // fazendo a interação com a API
   constructor(private httpClient: HttpClient) {}

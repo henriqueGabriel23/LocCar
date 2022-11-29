@@ -24,6 +24,7 @@ export class CadastroComponent implements OnInit {
       nome: "",
       numero: "",
       email: "",
+      senha: ""
     })
     this.listarUsuario()
   }
@@ -45,12 +46,14 @@ export class CadastroComponent implements OnInit {
     let nomeInput = this.form.controls["nome"].value
     let numeroInput = this.form.controls["numero"].value
     let emailInoput = this.form.controls["email"].value
+    let senhaInput = this.form.controls["senha"].value
 
     let dados ={
       id: idLength,
       nome: nomeInput,
       numero: numeroInput,
-      email: emailInoput
+      email: emailInoput,
+      senha: senhaInput
     }
 
     this.servicoUsuario.postUsuario(dados).subscribe({

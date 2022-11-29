@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { usuarioModel } from '../models/loccar.model';
 import { PerfilService } from '../services/perfil.service';
 
-
 @Component({
   selector: 'app-perfiladm',
   templateUrl: './perfiladm.component.html',
@@ -20,6 +19,8 @@ export class PerfiladmComponent {
 
   // pegar id do usuario
   idLength = 0
+
+  salvarSenha!: string
   
   constructor(private servicoperfil:PerfilService, private formbuilder:FormBuilder){}
 
@@ -27,7 +28,7 @@ export class PerfiladmComponent {
     this.form = this.formbuilder.group({
       nome: "",
       numero: "",
-      email: ""
+      email: "",
     })
 
     this.listarUsuario()
@@ -63,6 +64,7 @@ export class PerfiladmComponent {
   // pegando dados e jogar no input
   pegarDados(dados: usuarioModel){
     this.idLength = dados.id
+    this.salvarSenha = dados.senha
     this.form.controls["nome"].setValue(dados.nome)
     this.form.controls["numero"].setValue(dados.numero)
     this.form.controls["email"].setValue(dados.email)
@@ -77,7 +79,8 @@ export class PerfiladmComponent {
       id: this.idLength,
       nome: nomeInput,
       numero: numeroInput,
-      email: emailInput
+      email: emailInput,
+      senha: this.salvarSenha
     }
 
     this.servicoperfil.editarADM(dados).subscribe({

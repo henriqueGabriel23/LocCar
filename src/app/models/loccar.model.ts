@@ -3,4 +3,5 @@ export interface usuarioModel{
     nome: string;
     numero: string;
     email: string;
+    senha: string
 }
