@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LOcadoraService } from '../Services/l-ocadora.service';
 import { FormBuilder } from '@angular/forms';
 
@@ -22,15 +22,12 @@ export class LocadoraComponent {
   ngOnInit(): void {
     //  carrega ao iniciar o cite
     this.form = this.fb.group({
-      nome: '',
-      endereco: '',
-      telefone: ''
+      nome: new FormControl('',[Validators.required]),
+      endereco: new FormControl('',[Validators.required]),
+      telefone: new FormControl('',[Validators.required , Validators.email])
     })
-
     this.ListarLocadoras()
   }
-
-
   ListarLocadoras() {
     this.servicolocadora.PegarLocadoras().subscribe({
       next: (dados: any) => {
@@ -42,9 +39,7 @@ export class LocadoraComponent {
       }
     })
   }
-
   CadastrarLocadora() {
-
     let nome = this.form.controls["nome"].value
     let endereco = this.form.controls["endereco"].value
     let telefone = this.form.controls["telefone"].value
@@ -55,7 +50,6 @@ export class LocadoraComponent {
       endereco: endereco,
       telefone: telefone
     }
-
     this.servicolocadora.CadastarLocadoras(dados).subscribe({
       next: (dados: any) => {
         console.log(dados);
@@ -66,7 +60,6 @@ export class LocadoraComponent {
       }
     })
   }
-
   DeletarLocadora(id: number) {
     this.servicolocadora.DeletarLocadoras(id).subscribe({
       next: (dados: any) => {
@@ -78,7 +71,6 @@ export class LocadoraComponent {
       }
     })
   }
-
   PuxarDadosLocadora(dados: any) {
     this.elementoID = dados.id;
     this.form.controls["nome"].setValue(dados.nome);
@@ -86,20 +78,16 @@ export class LocadoraComponent {
     this.form.controls["telefone"].setValue(dados.telefone);
     this.Cadastro = false;
   }
-
   EditarLocadoras() {
-
     let nome = this.form.controls["nome"].value
     let endereco = this.form.controls["endereco"].value
     let telefone = this.form.controls["telefone"].value
-
     let dados = {
       id: this.elementoID,
       nome: nome,
       endereco: endereco,
       telefone: telefone
     }
-
     this.servicolocadora.EditarLocadoras(dados).subscribe({
       next: (dados: any) => {
         console.log(dados);
@@ -109,7 +97,5 @@ export class LocadoraComponent {
         console.log('nao deu bom :(' + erro);
       }
     })
-
   }
-
 }
