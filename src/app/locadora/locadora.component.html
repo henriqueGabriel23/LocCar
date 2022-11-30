@@ -1,14 +1,14 @@
 <app-header></app-header>
 <!-- Parte de cadastro -->
 <main>
-    <form [formGroup]="form">
+    <form [formGroup]="form" ngNativeValidate>
         <div class="cadastro">
             <p class="locadora">Locadora</p>
             <div class="inpults">
-                <input type="text" placeholder="Locadora" formControlName="nome" class="inpult">
-                <input type="text" placeholder="Endereço" formControlName="endereco" class="inpult">
+                <input type="text" placeholder="Locadora" formControlName="nome" class="inpult" required >
+                  <input type="text" placeholder="Endereço" formControlName="endereco" class="inpult" required>
                 <div class="tel_e_botao">
-                    <input type="text" placeholder="Telefone" formControlName="telefone" class="inpult_tel">
+                    <input type="text" placeholder="Telefone" formControlName="telefone" class="inpult_tel" required>
                     <button type="submit" class="botao_de_cadastro" *ngIf="Cadastro" (click)="CadastrarLocadora()">Cadastar</button>
                     <button type="submit" class="botao_de_cadastro" *ngIf="!Cadastro" (click)="EditarLocadoras()">Editar</button>
                 </div>

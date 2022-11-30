@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class LOcadoraService {
 
-  url: string = 'http://localhost:3000/locadoras'
+  url: string = 'https://servidorcarros.glitch.me/locadoras'
 
   constructor(private httpClient: HttpClient) { }
 
@@ -29,8 +29,5 @@ export class LOcadoraService {
     return this.httpClient.put(`${this.url}/${dados.id}` , dados)
 
   }
-
-
-
-
+ 
 }
