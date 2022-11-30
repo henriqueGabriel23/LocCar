@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 import { HomeComponent } from './home/home.component';
@@ -24,7 +25,9 @@ import { ModalCarroComponent } from './modal-carro/modal-carro.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SweetAlert2Module
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
