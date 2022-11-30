@@ -1,0 +1,133 @@
+main {
+    width: 550px;
+    height: 753px;
+    margin: auto;
+
+    background: #E9EEF7;
+    border-radius: 10px;
+}
+
+.conteudo {
+    width: 550px;
+    height: 753px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #E9EEF7;
+    border-radius: 10px;
+}
+
+.exit {
+    position: relative;
+    left: 236px;
+    top: 68px;
+
+    /* Texto Negrito */
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+    width: 56px;
+    height: 53px;
+    /* Primária */
+    color: white;
+    background: #F55E5E;
+    box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56), -3px -3px 5px #F55E5E;
+    border-radius: 10px;
+    border: none;
+}
+
+img {
+    width: 550px;
+
+    background: #E9EEF7;
+    border-radius: 10px;
+}
+
+.subtitulo {
+    width: 292px;
+    height: 62px;
+
+
+    /* Título */
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+
+    color: #4A6D84;
+}
+
+.informacao {
+    width: 502px;
+    height: 43px;
+    margin-top: 20px;
+
+
+    /* Fundo */
+
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    border: none;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #4A6D84;
+}
+
+
+.reservar {
+    width: 500px;
+    height: 70px;
+    margin-top: 10px;
+
+
+    /* Primária */
+
+    background: #F55E5E;
+    box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56), -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    border: none;
+
+    /* Texto Negrito */
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}

@@ -10,13 +10,15 @@ import { HttpClientModule } from '@angular/common/http'
 import { HomeComponent } from './home/home.component';
 import { CarrosComponent } from './carros/carros.component';
 import { CarrosClienteComponent } from './carros-cliente/carros-cliente.component';
+import { ModalCarroComponent } from './modal-carro/modal-carro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CarrosComponent,
-    CarrosClienteComponent
+    CarrosClienteComponent,
+    ModalCarroComponent
   ],
   imports: [
     BrowserModule,
