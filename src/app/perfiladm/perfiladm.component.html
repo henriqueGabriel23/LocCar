@@ -21,9 +21,9 @@
         <!-- criando área de usuarios cadastrados -->
         <div class="informacoesClientes" *ngFor="let adm of listaUsuarios; index as i;" (click)="pegarDados(adm)">
             <!-- aqui fica as informações dos clientes -->
-            <p>{{adm.nome}}</p>
-            <p>{{adm.numero}}</p>
-            <p>{{adm.email}}</p>
+            <p class="txt">{{adm.nome}}</p>
+            <p class="txt">{{adm.numero}}</p>
+            <p class="txt">{{adm.email}}</p>
             <!-- botão para exluir registro -->
             <button class="buttomExcluir" (click)="deletarADM(adm.id)">Excluir usuário</button>
         </div>

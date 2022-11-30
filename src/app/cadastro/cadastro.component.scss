@@ -19,7 +19,7 @@ form{
     box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
     border-radius: 10px;
     width: 800px;
-    height: 400px;
+    height: 550px;
     margin: auto;
     margin-top: 100px;  
     text-align: center;
@@ -60,4 +60,8 @@ button:hover{
 // mudar de cor ao clicar no botão
 button:active{
     background-color: #741212;
+}
+
+.erro{
+    color: red;
 }

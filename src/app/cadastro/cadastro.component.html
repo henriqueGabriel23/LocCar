@@ -11,6 +11,7 @@
         <!-- declarando formgroup -->
         <form [formGroup]="form">
             <!-- input od nome -->
+            <p class="erro" *ngIf="this.error">Coloque todas as informações!</p>
             <input type="text" placeholder="Nome completo" formControlName="nome">
             <!-- input do telefone -->
             <input type="text" placeholder="(11) 9999-9090" formControlName="numero">
