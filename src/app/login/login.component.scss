@@ -1,39 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-p {
-    font-family: 'Quicksand';
-    font-size: 24px;
+body {
+    background: #E9EEF7;
 }
 
-.botao_login {
-    background: #F55E5E;
-    border-radius: 10px;
-    width: 170px;
-    height: 50px;
-    color: white;
-    border-color: #F55E5E;
+main {
+    margin: auto;
+    display: flex;
+     justify-content: center;
+    align-items: center;
 }
+
 
 .login {
     display: flex;
+    height: 400px;
+    width: 800px;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
+    box-shadow: -3px -3px 13px 0px #FFFFFF;
+    box-shadow: 3px 3px 13px 0px #CBDBE8;
+    border-radius: 10px;
 }
 
-div {
-    background: #E9EEF7;
-    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
-    border-radius: 10px;
-    width: 800px;
-    height: 400px;
+.frase {
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    text-align: center;
+    height: 57px;
+    width: 691px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 10px;
 }
 
-main{
-    width: 100%;
+.email_senha {
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+
+.inp {
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    width: 650px;
+    height: hug(50px);
+    border-radius: 10px;
+    padding: 10px 12px 10px 12px;
+    border: 0;
+    margin-top: 20px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #4A6D84;
+
+}
+
+.botao {
+    height: 50px;
+    width: 170px;
+    border-radius: 10px;
+    padding: 9px 33px 9px 33px;
+    margin-top: 50px;
+    background: #F55E5E;
+    box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
+    border-radius: 10px;
+    border: 0;
+    color: wheat;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
 }

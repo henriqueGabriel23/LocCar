@@ -1,41 +1,46 @@
 <main>
-    <!-- essa div é para o fundo -->
-    <div class="tudo_da_parte_de_cima">
-        <h1>reservas</h1>
-        <div class="carro">
-            <input class="carro_input" type="text" id="Onix 2.0" placeholder="Onix 2.0">
+    <div class="reservas">
+        <p class="titulo">Reservas</p>
+        <div class="tamamho">
+            <!-- div tamanho_N = tamanho do nome -->
+            <div class="tamanho_N">
+                <input type="text" class="nome" placeholder="Onix 2.0">
+            </div>
+            <!-- div tamanho_DHD =  data da reserva, hora, data de devolução. -->
+            <div class="tamanho_DHD">
+                <input type="text" class="DHD" placeholder="Data da reserva">
+                <input type="text" class="DHD" placeholder="Horário da reserva">
+                <input type="text" class="DHD" placeholder="Data da devolução">
+            </div>
         </div>
-        <br>
-        <br>
-        <!-- espaso entre eles -->
-        <div class="hora_data_devolucao">
-            <input class="hora_data_devolucao_input" type="text" id="Data da reserva" placeholder="Data da reserva">
-            <input class="hora_data_devolucao_input" type="text" id="Horário da reserva" placeholder="Horário da reserva">
-            <input class="hora_data_devolucao_input" type="text" id="Data da devolução" placeholder="Data da devolução">
-        </div>
-        <br>
-
-        <!-- opção de locadora -->
-        <div class="botao_locadora">
-            <select class="locadora" id="locadora_final" name="Selecione a locadora filial">
-                <option>Selecione a locadora filial</option>
-                <option value="Ágil Rent a Car">Ágil Rent a Car</option>
-                <option value="Alukauto Rent a Car">Alukauto Rent a Car</option>
-                <option value=" BM Rent a Car"> BM Rent a Car</option>
-                <option value="Plus Rent a Car">Plus Rent a Car</option>
+        <div class="select_e_botao">
+            <select class="select">
+                <option value="0" disabled>Selecione a locadora filial</option>
             </select>
+            <button type="submit" class="botao">Cadastrar</button>
+        </div>
+    </div>
+    <div class="reservas_cadastradas">
+        <div class="reservas">
+            <div class="ajuste">
+                <p class="titulo2">Reservas cadastradas</p>
+                <div class="linha"></div>
+            </div>
+            <div class="cadastrados">
+                <img src="../../assets/car3 2.png" class="img">
 
-            <button class="botao_cadastra">cadastrar</button>
+                <div class="dhd">
+                    <p class="SubTitulo">Fiat Uno 1.0</p>
+                    <p class="espaco">Data retirada: 22/05/2022</p>
+                    <p class="font"> Horário retirada: 16:30</p>
+                    <p class="font"> Data devolução: 30/05/2022</p>
+                </div>
+                <div class="botao_e">
+                    <button type="submit" class="excluir">Excluir reserva</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- parte dois do site, CARROS RESERVADOS -->
-    <div class="segunda_parte">
-        <h1>Reservas cadastradas</h1>
 
-        <div class="imagem">
-            <img src="../../assets/carro DESAFIO FINAL.png" alt="topo">
-
-        </div>
-    </div>
 </main>
