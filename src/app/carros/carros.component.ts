@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { CriarCarros } from '../models/cadastro.model';
-import { CarrosService } from '../service/carros.service';
+import { CarrosService } from '../Services/carros.service';
 
 @Component({
   selector: 'app-carros',

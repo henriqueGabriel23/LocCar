@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { usuarioModel } from '../models/loccar.model';
-import { PerfilService } from '../services/perfil.service';
+import { PerfilService } from '../Services/perfil.service';
 
 @Component({
   selector: 'app-perfiladm',
