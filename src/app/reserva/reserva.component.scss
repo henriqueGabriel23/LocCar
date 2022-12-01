@@ -1,0 +1,223 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.reservas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 485px;
+    width: 1200px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #4A6D84;
+    margin-top: 20px;
+}
+
+.nome {
+    width: 650px;
+    margin-top: 50px;
+    height: hug(50px);
+    padding: 10px 12px 10px 12px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    border: 0;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #4A6D84;
+}
+
+.tamanho_DHD {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tamanho {
+    max-width: 200px;
+}
+
+
+.DHD {
+    height: hug(40px);
+    width: hug(200px);
+    margin-top: 20px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    padding: 10px 12px 10px 12px;
+    border: 0;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4A6D84;
+}
+
+.select {
+    height: hug(50px);
+    width: 456px;
+    border-radius: 10px;
+    padding: 10px 12px 10px 12px;
+    justify-content: space-between;
+    margin-top: 20px;
+    border: 0;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+}
+
+.select_e_botao {
+    display: flex;
+    justify-content: space-between;
+    width: 670px;
+}
+
+.loc {
+    height: hug(50px);
+    width: 456px;
+    border-radius: 10px;
+    padding: 10px 12px 10px 12px;
+    justify-content: space-between;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px
+}
+
+.botao {
+    margin-top: 20px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    background: #F55E5E;
+    color: #FFFFFF;
+    height: 50px;
+    width: 170px;
+    padding: 9px 33px 9px 33px;
+    box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
+    border-radius: 10px;
+    border: 0;
+}
+
+.reservas_cadastradas {
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+    flex-direction: column;
+    width: 1200px;
+    border-radius: 10px;
+    background: #E9EEF7;
+    align-items: flex-start;
+
+}
+
+.titulo2 {
+    width: 1081px;
+    font-family: 'Quicksand';
+    display: flex;
+    align-items: flex-start;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #4A6D84;
+    margin-top: 20px;
+}
+
+.reservas {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cadastrados {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 202px;
+    width: 1081px;
+    border-radius: 10px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
+    margin-top: 20px;
+}
+
+.img {
+    display: flex;
+}
+
+.linha{width: 300px;
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #4A6D84;
+    }
+
+.SubTitulo {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 29px;
+    color: #4A6D84;
+ }
+
+.espaco {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #4A6D84;
+    margin-top: 15px;
+}
+
+.font {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #4A6D84;
+}
+
+.excluir {
+    border: 0;
+    height: 50px;
+    width: 266px;
+    border-radius: 10px;
+    padding: 9px 33px 9px 33px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #F55E5E;
+}
+
+.botao_e{width: 290px;}
+
+// .ajuste{display: flex;
+// flex-direction: column;}

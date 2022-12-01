@@ -4,6 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { ReservaComponent } from './reserva/reserva.component';
 import { HttpClientModule } from '@angular/common/http'
 
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -21,6 +23,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 @NgModule({
     declarations: [
         AppComponent,
+    LoginComponent,
+    ReservaComponent,
         CadastroComponent,
         HomeComponent,
         CarrosComponent,
