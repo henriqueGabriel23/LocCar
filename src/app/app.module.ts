@@ -15,6 +15,8 @@ import { PerfiladmComponent } from './perfiladm/perfiladm.component';
 import { LocadoraComponent } from "./locadora/locadora.component";
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
     declarations: [
@@ -26,13 +28,16 @@ import { HeaderComponent } from './header/header.component';
         PerfiladmComponent,
         LocadoraComponent,
         FooterComponent,
-        HeaderComponent
+        HeaderComponent,
+    CadastroComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
         ReactiveFormsModule,
         HttpClientModule,
         HttpClientModule,

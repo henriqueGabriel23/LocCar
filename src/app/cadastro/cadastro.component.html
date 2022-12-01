@@ -3,19 +3,24 @@
     <!-- criando parte da logo -->
     <div class="alteracoes_logo">
         <div class="logo_carro">
-            <img src="../../assets/img/Group 1.png" >
+            <img src="../../assets/cadastroIMG/Group 1.png">
         </div>
     </div>
     <!-- criando área dos inputs -->
-    <div class="borda">
-        <div>
-            <form>
-                <input type="text" placeholder="Nome completo">
-                <input type="text" placeholder="(11) 9999-9090">
-                <input type="email" placeholder="exemplo@gmail.com">
-                <a><button>Cadastrar</button></a>
-            </form>
-        </div>
+    <div>
+        <!-- declarando formgroup -->
+        <form [formGroup]="form">
+            <!-- input od nome -->
+            <p class="erro" *ngIf="this.error">Coloque todas as informações!</p>
+            <input type="text" placeholder="Nome completo" formControlName="nome">
+            <!-- input do telefone -->
+            <input type="text" placeholder="(11) 9999-9090" formControlName="numero">
+            <!-- input do email -->
+            <input type="email" placeholder="exemplo@gmail.com" formControlName="email">
+            <!-- input senha -->
+            <input type="password" placeholder="digite sua senha" formControlName="senha">
+            <!-- botão de cadastrar -->
+            <a><button (click)="postarUsuario()">Cadastrar</button></a>
+        </form>
     </div>
 </main>
-<app-footer></app-footer>

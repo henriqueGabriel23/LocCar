@@ -105,6 +105,7 @@ input{
     width: 1098px;
     height: 101px;
     align-items: center;
+    margin-top: 20px;
 }
 // estilizando o botão de excluir
 .buttomExcluir{
@@ -126,4 +127,9 @@ input{
     background-color: #c76060;
     color: white;
     cursor: pointer;
+}
+
+.txt{
+    width: 200px;
+    font-size: 20px;
 }
