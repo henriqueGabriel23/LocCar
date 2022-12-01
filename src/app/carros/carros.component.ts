@@ -88,14 +88,16 @@ verificarEditar:boolean = false
    const portas = this.form.controls['portas'].value
    const nPessoas = this.form.controls['nPessoas'].value
    const locadoraId = this.form.controls['locadora'].value
- 
+    console.log(typeof parseInt(tipoCarroId) );
+    
+
    const carro:CriarCarros = { 
      id:id,
      nome:nome, 
-     tipoCarroId:tipoCarroId, 
-     portas:portas,
-     nPessoas:nPessoas,
-     locadoraId:locadoraId
+     tipoCarroId: parseInt(tipoCarroId), 
+     portas:parseInt(portas),
+     nPessoas:parseInt(nPessoas),
+     locadoraId:parseInt(locadoraId)
    }
    console.log(carro)
 

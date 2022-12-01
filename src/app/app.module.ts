@@ -11,6 +11,7 @@ import { ReservaComponent } from './reserva/reserva.component';
 import { HomeComponent } from './home/home.component';
 import { CarrosComponent } from './carros/carros.component';
 import { CarrosClienteComponent } from './carros-cliente/carros-cliente.component';
+import { ModalCarroComponent } from './modal-carro/modal-carro.component';
 import { PerfiladmComponent } from './perfiladm/perfiladm.component';
 import { LocadoraComponent } from "./locadora/locadora.component";
 import { FooterComponent } from './footer/footer.component';
@@ -27,6 +28,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
         HomeComponent,
         CarrosComponent,
         CarrosClienteComponent,
+    ModalCarroComponent,
         PerfiladmComponent,
         LocadoraComponent,
         FooterComponent,
