@@ -7,6 +7,9 @@ import { CriarClientes } from '../models/salvar-cliente';
   providedIn: 'root'
 })
 export class ServiceLoginService {
+  set(clientes: CriarClientes) {
+    throw new Error('Method not implemented.');
+  }
 
   listaCliente: any
 
