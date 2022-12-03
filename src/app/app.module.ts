@@ -22,26 +22,26 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 @NgModule({
     declarations: [
         AppComponent,
-    LoginComponent,
-    ReservaComponent,
+        LoginComponent,
+        ReservaComponent,
         CadastroComponent,
         HomeComponent,
         CarrosComponent,
         CarrosClienteComponent,
-    ModalCarroComponent,
+        ModalCarroComponent,
         PerfiladmComponent,
         LocadoraComponent,
         FooterComponent,
         HeaderComponent,
-    CadastroComponent
+        CadastroComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
+        ReactiveFormsModule,
+        HttpClientModule,
         ReactiveFormsModule,
         HttpClientModule,
         HttpClientModule,

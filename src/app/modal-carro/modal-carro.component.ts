@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { CriarCarros } from '../models/cadastro.model';
-import { CarrosService } from '../service/carros.service';
+import { CarrosService } from '../Services/carros.service';
+import { ModalService } from '../Services/modal.service';
 
 @Component({
   selector: 'app-modal-carro',
@@ -9,75 +10,75 @@ import { CarrosService } from '../service/carros.service';
   styleUrls: ['./modal-carro.component.scss']
 })
 export class ModalCarroComponent {
-  form!:FormGroup
+  @Input() carro!:any
+
   carros!: CriarCarros[]
+  
   listaTipoCarros!: any[]
   listaLocadora!: any[]
-  selected:any = "0"
-  carroId!:number
-  verificarEditar:boolean = false
-  
-    constructor(  private fb: FormBuilder,
-      private salvarCarroService: CarrosService) {}
-    ngOnInit(): void {
-      this.form = this.fb.group({
-        nomeCarro: new FormControl(''),
-        tipo: new FormControl(''),
-        portas: new FormControl(''),
-        nPessoas: new FormControl(''),
-        locadora: new FormControl('')
-      })
-      this.form.controls['tipo'].setValue('0')
-      this.form.controls['locadora'].setValue('0')
-     this.lerDadosCarros()
-     this.lerDadosTipoCarros()
-     this.lerDadosLocadora()
-    }
-    lerDadosCarros(){
-      this.salvarCarroService.lerCarros().subscribe({
-       next: (carro: CriarCarros[]) => {
-         this.carros = carro
-         console.log(this.carros);
-         
-       },
-       error: () => {
-         console.log('erro lerCarros');
-  
-       }
-     });
-     
-    }
-    lerDadosTipoCarros(){
-      this.salvarCarroService.lerTipoCarros().subscribe({
-       next: (tipoCarro:any[]) => {
-        this.listaTipoCarros = tipoCarro
-  
-         console.log(tipoCarro);
-         
-       },
-       error: () => {
-         console.log('erro lerCarros');
-  
-       }
-     });
-    }
-    lerDadosLocadora(){
-      this.salvarCarroService.lerLocadora().subscribe({
-       next: (locadora:any[]) => {
-        this.listaLocadora = locadora
-  
-         console.log(locadora);
-         
-       },
-       error: (error:any) => {
-         console.log('erro locadora' + error);
-  
-       }
-     });
-    }
-    filterCarros(tipoCarro:any){
-      
-      return this.carros.filter(c => c.tipoCarro.nome === tipoCarro)
-      
-    }
+  constructor(private fb: FormBuilder,
+    private salvarCarroService: CarrosService,
+    private modalService: ModalService) { }
+  ngOnInit(): void {
+    this.lerDadosCarros()
+  }
+  modal(): boolean {
+    return this.modalService.mostrarModal
+  }
+  modalToggle() {
+    this.modalService.toggleModal()
+  }
+
+
+  lerDadosCarros() {
+    this.salvarCarroService.lerCarros().subscribe({
+      next: (carro: CriarCarros[]) => {
+        this.carros = carro
+        
+        console.log(this.carros);
+
+      },
+      error: () => {
+        console.log('erro lerCarros');
+
+      }
+    });
+    
+
+
+  }
+  lerDadosTipoCarros(){
+    this.salvarCarroService.lerTipoCarros().subscribe({
+     next: (tipoCarro:any[]) => {
+      this.listaTipoCarros = tipoCarro
+
+       console.log(this.listaTipoCarros);
+       
+     },
+     error: () => {
+       console.log('erro lerCarros');
+
+     }
+   });
+  }
+  lerDadosLocadora(){
+    this.salvarCarroService.lerLocadora().subscribe({
+     next: (locadora:any[]) => {
+      this.listaLocadora = locadora
+
+       console.log(locadora);
+       
+     },
+     error: (error:any) => {
+       console.log('erro locadora' + error);
+
+     }
+   });
+  }
+  filterCarros(tipoCarro:any){
+    
+    return this.carros.filter(c => c.tipoCarro.nome === tipoCarro)
+    
+  }
+
 }

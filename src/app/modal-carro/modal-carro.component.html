@@ -1,15 +1,11 @@
-<main>
-    <form [formGroup]="form" *ngFor="let tipo of listaTipoCarros ; index as i;" >
-        <div class="conteudo" *ngFor="let carro of filterCarros(tipo.nome); index as i;">
-            <button class="exit">X</button>
-            <img src="../../assets/car3 2.png">
-            <p class="subtitulo" >{{carro.nome}}</p>
-            <p class="informacao">{{tipo.nome}}</p>
-            <p class="informacao">{{carro.portas + " Portas"}}</p>
-            <p class="informacao" >{{carro.nPessoas}}</p>
-            <p class="informacao" *ngFor="let locadora of listaLocadora ; index as i;">{{locadora.nome}}</p>
-            <button class="reservar">Reservar</button>
+<div class="conteudo">
+    <button class="exit" (click)="modalToggle()">X</button>
+    <img src="../../assets/car3 2.png">
+    <p class="subtitulo">{{carro}}</p>
+    <p class="informacao">{{carro.portas}}</p>
+    <p class="informacao"></p>
+    <p class="informacao"></p>
+    <p class="informacao"></p>
+    <button class="reservar">Reservar</button>
 
-        </div>
-    </form>
-</main>
+</div>
