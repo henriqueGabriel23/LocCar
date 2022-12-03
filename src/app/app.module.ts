@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ReservaComponent } from './reserva/reserva.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 import { HomeComponent } from './home/home.component';
@@ -20,10 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        LoginComponent,
-        ReservaComponent,
+      declarations: [
+            AppComponent,
+            LoginComponent,
+            ReservaComponent,
         CadastroComponent,
         HomeComponent,
         CarrosComponent,
@@ -34,16 +37,18 @@ import { CadastroComponent } from './cadastro/cadastro.component';
         FooterComponent,
         HeaderComponent,
         CadastroComponent
-    ],
-    providers: [],
+      ],
+      providers: [],
     bootstrap: [AppComponent],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        ReactiveFormsModule,
+            BrowserModule,
+            AppRoutingModule,
         HttpClientModule,
         ReactiveFormsModule,
-        HttpClientModule,
+          ReactiveFormsModule,
+          HttpClientModule,
+        ReactiveFormsModule,
+          HttpClientModule,
         HttpClientModule,
         ReactiveFormsModule,
 
