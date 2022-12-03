@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 
 @NgModule({
       declarations: [
@@ -26,6 +27,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
             LoginComponent,
             ReservaComponent,
         CadastroComponent,
+    PerfilClienteComponent,
         HomeComponent,
         CarrosComponent,
         CarrosClienteComponent,
