@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./reserva.component.scss']
 })
 export class ReservaComponent {
-
+  selected:any = "0"
   constructor() { }
 
   ngOnInit(): void {

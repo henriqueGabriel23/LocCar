@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ServiceLoginService } from '../service/service-login.service';
+import { ServiceLoginService } from '../Services/service-login.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CriarClientes } from '../models/salvar-cliente';
 import { LocalStorageService } from '../local-service/local-storage.service';
@@ -79,8 +79,13 @@ export class LoginComponent {
     const email = this.form.controls["email"].value;
     const senha = this.form.controls["senha"].value;
 
-    localStorage.setItem( email, senha);
+    let usuario = this.cliente.filter(x => x.email === email && x.senha === senha).map(async (x) => localStorage.setItem('user', JSON.stringify(x)))
+    localStorage.setItem('user', `${usuario}`)
   }
 }
+
+
+
+
 
 

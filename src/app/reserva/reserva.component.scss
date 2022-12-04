@@ -55,7 +55,7 @@ main {
 }
 
 
-.DHD {
+input{
     height: hug(40px);
     width: hug(200px);
     margin-top: 20px;
@@ -63,7 +63,7 @@ main {
     box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
     border-radius: 10px;
     padding: 10px 12px 10px 12px;
-    border: 0;
+    border: none;
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
@@ -71,6 +71,50 @@ main {
     line-height: 20px;
     color: #4A6D84;
 }
+
+
+input:focus {
+    background: #E9EEF7;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    width: 180px;
+    height: 30px;
+    /* Texto */
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #4A6D84;
+
+}
+.nome::placeholder{
+    max-width: 120px;
+    width: 80px;
+}
+.dataReserva::placeholder{
+    width: 145px;
+}
+.horaReserva::placeholder{
+    width: 165px;
+}
+.dataDevolucao::placeholder{
+    width: 168px;
+}
+
 
 .select {
     height: hug(50px);
@@ -162,6 +206,7 @@ main {
     margin-top: 20px;
 }
 
+
 .img {
     display: flex;
 }
@@ -221,3 +266,40 @@ main {
 
 // .ajuste{display: flex;
 // flex-direction: column;}
+
+
+
+select {
+
+    width: 650px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    border: none;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #39A9F0;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+option::placeholder {
+    display: flex;
+    align-items: flex-start;
+}

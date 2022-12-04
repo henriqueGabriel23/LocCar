@@ -41,12 +41,41 @@ main {
     margin-top: 30px;
     background: #E9EEF7;
     box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
-    border: 0;
+    border: none;
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
+}
+
+
+input:focus {
+    background: #E9EEF7;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    width: 104px;
+    height: 30px;
+    /* Texto */
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #4A6D84;
+
 }
 
 .tel_e_botao {

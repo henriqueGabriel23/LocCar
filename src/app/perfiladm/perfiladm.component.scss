@@ -27,23 +27,53 @@ form{
 }
 
 // estilizando os inputs
-input{
-    margin-top: 30px;
+input {
     width: 650px;
     height: 50px;
     background: #E9EEF7;
-    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #CBDBE8;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
     border-radius: 10px;
-    border-color: #CBDBE8;
-    border: 1px solid rgb(173, 175, 211);
-    font-size: 17px;
-    outline: none;
+    font-size: 24px;
+    border: none;
+    margin-top: 20px;
 }
-// fazendo profundidado quando curssor esta em cima
-.input:focus{
+
+input:focus {
     background: #E9EEF7;
     box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
     border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    width: 200px;
+    height: 30px;
+    /* Texto */
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #4A6D84;
+
+}
+.inputNome::placeholder{
+    width: 240px;
+    
+}
+.inputTelefone::placeholder{
+    width: 180px;
+}
+.inputEmail::placeholder{
+    width: 250px;
 }
 //estilizando o botão de autualização 
 .buttomAtualizar{
