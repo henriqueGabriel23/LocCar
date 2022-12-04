@@ -51,10 +51,10 @@ export class LoginComponent {
   }
 
   // setItem() {
-  // console.log(this.cliente[(this.cliente.length) - 1]);
-  // const id = this.cliente[(this.cliente.length) - 1].id + 1;
-  // const email = this.form.controls["email"].value;
-  // const senha = this.form.controls["senha"].value;
+    // console.log(this.cliente[(this.cliente.length) - 1]);
+    // const id = this.cliente[(this.cliente.length) - 1].id + 1;
+    // const email = this.form.controls["email"].value;
+    // const senha = this.form.controls["senha"].value;
 
 
   //   const clientes: CriarClientes = { id: id, email: email, senha: senha };
@@ -73,23 +73,15 @@ export class LoginComponent {
 
   // }
 
-  setItem() {
+  setItem(){
     console.log(this.cliente[(this.cliente.length) - 1]);
     const id = this.cliente[(this.cliente.length) - 1].id + 1;
     const email = this.form.controls["email"].value;
     const senha = this.form.controls["senha"].value;
-    
 
-    localStorage.setItem(email, senha);
-    console.log(email, senha)
-
-    let usuarios = this.cliente.filter(x => x.email === email && x.senha === senha)
-    localStorage.setItem('user', `${usuarios}`)
+    let usuario = this.cliente.filter(x => x.email === email && x.senha === senha).map(async (x) => localStorage.setItem('user', JSON.stringify(x)))
+    localStorage.setItem('user', `${usuario}`)
   }
-
-  
-
-
 }
 
 

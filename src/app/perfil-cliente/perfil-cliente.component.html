@@ -1,17 +1,17 @@
 <main>
     <div class="borda">
         <h3>Perfil</h3>
-        <div class="registro">
-            <input placeholder="Maria de Fátima Muniz">
-            <br>
-            <input placeholder="(11)9999-9090">
-            <br>
-            <input placeholder="maria@gmail.com">
-            <br>
-            <div class="botos_espacamento">
-                <button class="atualizar">Atualizar</button>
-                <button class="excluir_cadastro">Excluir cadastro</button>
+        <form [formGroup]="form">
+            <div class="registro">
+                <input placeholder="Maria de Fátima Muniz" formControlName="nome">
+                <input placeholder="(11)9999-9090" formControlName="telefone">
+                <input placeholder="maria@gmail.com" formControlName="email">
+                <div class="botos_espacamento">
+
+                    <button class="atualizar">Atualizar</button>
+                    <button class="excluir_cadastro">Excluir cadastro</button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </main>
