@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Reserva_cliente } from '../model/model';
-import { ReservaService } from '../services adm_reserva/service.service';
+import { ReservaService } from '../Services/reserva.service';
 
 @Component({
   selector: 'app-reserva',

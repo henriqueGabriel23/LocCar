@@ -1,0 +1,48 @@
+<app-header></app-header>
+<main>
+    <div class="reservas">
+        <p class="titulo">Reservas</p>
+        <div class="tamamho">
+            <!-- div tamanho_N = tamanho do nome -->
+            <div class="tamanho_N">
+                <input type="text" class="nome" placeholder="Onix 2.0">
+            </div>
+            <!-- div tamanho_DHD =  data da reserva, hora, data de devolução. -->
+            <div class="tamanho_DHD">
+                <input type="text" class="dataReserva" placeholder="Data da reserva">
+                <input type="text" class="horaReserva" placeholder="Horário da reserva">
+                <input type="text" class="dataDevolucao" placeholder="Data da devolução">
+            </div>
+        </div>
+        <div class="select_e_botao">
+            <select class="select">
+                <option value="0" disabled>Selecione a locadora filial</option>
+                <option>Selecione a locadora filial</option>
+            </select>
+            <button type="submit" class="botao">Cadastrar</button>
+        </div>
+    </div>
+    <div class="reservas_cadastradas">
+        <div class="reservas">
+            <div class="ajuste">
+                <p class="titulo2">Reservas cadastradas</p>
+                <div class="linha"></div>
+            </div>
+            <div class="cadastrados">
+                <img src="../../assets/car3 2.png" class="img">
+
+                <div class="dhd">
+                    <p class="SubTitulo">Fiat Uno 1.0</p>
+                    <p class="espaco">Data retirada: 22/05/2022</p>
+                    <p class="font"> Horário retirada: 16:30</p>
+                    <p class="font"> Data devolução: 30/05/2022</p>
+                </div>
+                <div class="botao_e">
+                    <button type="submit" class="editar"  > editar</button>
+                    <button type="submit" class="excluir" >Excluir reserva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>
