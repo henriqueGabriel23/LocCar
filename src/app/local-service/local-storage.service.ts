@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class LocalStorageService {
 
   private storage: Storage;
+  currentUser: any;
 
   constructor() {
 
@@ -18,5 +19,16 @@ export class LocalStorageService {
       return true;
     }
     return false;
+  }
+
+  get(key: string): any {
+
+    this.storage = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser')!);
+
+    if (this.storage) {
+      return this.storage = JSON.parse(localStorage.getItem(key) || '{}');
+    }
+    return null;
   }
 }
