@@ -28,17 +28,17 @@
                 <p class="titulo2">Reservas cadastradas</p>
                 <div class="linha"></div>
             </div>
-            <div class="cadastrados">
+            <div class="cadastrados" *ngFor="let item of listaReserva ; index as i;">
                 <img src="../../assets/car3 2.png" class="img">
 
-                <div class="dhd">
+                <div class="dhd"  >
                     <p class="SubTitulo">Fiat Uno 1.0</p>
-                    <p class="espaco">Data retirada: 22/05/2022</p>
-                    <p class="font"> Horário retirada: 16:30</p>
-                    <p class="font"> Data devolução: 30/05/2022</p>
+                    <p class="espaco">{{item.data}}</p>
+                    <p class="font">{{item.horario}}</p>
+                    <p class="font">{{item.dataentrega}}</p>                   
                 </div>
                 <div class="botao_e">
-                    <button type="submit" class="excluir" >Excluir reserva</button>
+                    <button type="submit" class="excluir"(click)="DeletarReserva(item.id)">Excluir reserva</button>
                 </div>
             </div>
         </div>

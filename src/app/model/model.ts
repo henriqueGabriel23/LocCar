@@ -1,9 +1,9 @@
-export interface Reserva_cliente{
-
+export interface Reserva_cliente {
+    id: number
     data: string
-    horario: string 
+    horario: string
     dataentrega: string
     carroId: number
-    UsuarioId :number    
+    UsuarioId: number
 
 }
