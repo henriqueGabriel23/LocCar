@@ -64,7 +64,7 @@ export class ReservaComponent {
       }
     })
   }
-  DeletarLocadora(id: number) {
+  DeletarReserva(id: number) {
     this.servicoReserva.DeletarReserva(id).subscribe({
       next: (dados: Reserva_cliente[]) => {
         console.log(dados);

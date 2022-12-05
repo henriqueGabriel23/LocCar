@@ -2,22 +2,22 @@
 <main>
     <div class="reservas">
         <p class="titulo">Reservas</p>
-        <form>
+        <form [formGroup]="form" ngNativeValidate>
             <div class="tamamho">
                  <div class="tamanho_N">
                     <input type="text" class="nome" placeholder="Onix 2.0">
                 </div>
                  <div class="tamanho_DHD">
-                    <input type="text" class="DHD" placeholder="Data da reserva">
-                    <input type="text" class="DHD" placeholder="Horário da reserva">
-                    <input type="text" class="DHD" placeholder="Data da devolução">
-                </div>
+                    <input type="text" class="DHD" placeholder="Data da reserva" formControlName="data" required>
+                    <input type="text" class="DHD" placeholder="Horário da reserva" formControlName="horario" required>
+                    <input type="text" class="DHD" placeholder="Data da devolução" formControlName="dataentrega" required>
+                </div> 
             </div>
             <div class="select_e_botao">
                 <select class="select">
                     <option value="0" disabled>Selecione a locadora filial</option>
                 </select>
-                <button type="submit" class="botao" (click)="CadastrarReservas()">Cadastrar</button>
+                <button type="submit" class="botao" *ngIf="Cadastro" (click)="CadastrarReservas()">Cadastrar</button>
             </div>
         </form>
     </div>
@@ -27,17 +27,17 @@
                 <p class="titulo2">Reservas cadastradas</p>
                 <div class="linha"></div>
             </div>
-            <div class="cadastrados">
+            <div class="cadastrados" *ngFor="let item of listaReserva ; index as i;">
                 <img src="../../assets/car3 2.png" class="img">
 
-                <div class="dhd">
+                <div class="dhd"  >
                     <p class="SubTitulo">Fiat Uno 1.0</p>
-                    <p class="espaco">Data retirada: 22/05/2022</p>
-                    <p class="font"> Horário retirada: 16:30</p>
-                    <p class="font"> Data devolução: 30/05/2022</p>
+                    <p class="espaco">{{item.data}}</p>
+                    <p class="font">{{item.horario}}</p>
+                    <p class="font">{{item.dataentrega}}</p>                   
                 </div>
                 <div class="botao_e">
-                    <button type="submit" class="excluir" >Excluir reserva</button>
+                    <button type="submit" class="excluir"(click)="DeletarReserva(item.id)">Excluir reserva</button>
                 </div>
             </div>
         </div>
