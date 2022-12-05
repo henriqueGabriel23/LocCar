@@ -121,8 +121,5 @@ export class LoginComponent {
     }
 
   }
-
-function useState<T>(arg0: never[]): [any, any] {
-  throw new Error('Function not implemented.');
 }
 

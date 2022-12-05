@@ -1,24 +1,8 @@
+<app-header></app-header>
 <main>
-    <div class="form">
+    
         <p class="titulo">Carros</p>
-        <form [formGroup]="form">
-            <input type="text" placeholder="Nome do carro" formControlName="nomeCarro">
-            <select formControlName="tipo">
-                <option value="0" disabled>Selecione o tipo</option>
-                <option value="0" disabled>Selecione o tipo</option>
-            </select>
-            <div class="flex">
-                <input type="text" placeholder="Portas" class="inputMenor" formControlName="portas">
-                <input type="text" placeholder="Num de Pessoas" class="inputMenor" formControlName="nPessoas">
-            </div>
-            <div class="flex">
-                <select formControlName="locadora" class="selectMenor">
-                    <option>Selecione a locadora</option>
-                </select>
-                <button class="cadastrar">Cadastrar</button>
-            </div>
-        </form>
-    </div>
+    
     <app-modal-carro *ngIf="modal()"></app-modal-carro>
     <div class="todosCards" >
         <div *ngFor="let tipo of listaTipoCarros ; index as i;">
