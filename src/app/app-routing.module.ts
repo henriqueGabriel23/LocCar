@@ -10,14 +10,14 @@ import { ReservaComponent } from './reserva/reserva.component';
 
 const routes: Routes = [
 
-  {path:'', redirectTo:'home',pathMatch:'full'},
-  {path:'home', component:HomeComponent},
-  {path:'cadastro', component:CadastroComponent},
-  {path:'login', component:LoginComponent},
-  {path:'carros', component:CarrosComponent},
-  {path:'reservas', component:ReservaComponent},
-  {path:'perfil', component:PerfiladmComponent},
-  {path:'Locadora', component:LocadoraComponent}
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'cadastro', component: CadastroComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'carros', component: CarrosComponent },
+  { path: 'reservas', component: ReservaComponent },
+  { path: 'perfil', component: PerfiladmComponent },
+  { path: 'Locadora', component: LocadoraComponent },
 
 ];
 @NgModule({
