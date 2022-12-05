@@ -3,7 +3,7 @@ import { ServiceLoginService } from '../Services/service-login.service';
 import { EmailValidator, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CriarClientes } from '../models/salvar-cliente';
 import { LocalStorageService } from '../local-service/local-storage.service';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,13 +14,16 @@ export class LoginComponent {
 
   form!: FormGroup;
   cliente!: CriarClientes[];
+  listaClientes: any;
+  erro = "Email ou Senha Incorretos, Tente Novamente";
 
 
 
   constructor(
     private FormBulider: FormBuilder,
     private ServiceLoginService: ServiceLoginService,
-    private LocalStorageService: LocalStorageService) { }
+    private LocalStorageService: LocalStorageService
+  ) { }
 
   ngOnInit(): void {
 
@@ -51,30 +54,8 @@ export class LoginComponent {
 
   }
 
-  // setItem() {
-    // console.log(this.cliente[(this.cliente.length) - 1]);
-    // const id = this.cliente[(this.cliente.length) - 1].id + 1;
-    // const email = this.form.controls["email"].value;
-    // const senha = this.form.controls["senha"].value;
 
-
-  //   const clientes: CriarClientes = { id: id, email: email, senha: senha };
-
-  //   this.LocalStorageService.set(this.setItem).subscribe({
-  //     next: () => {
-  //       console.log("entrou adm");
-  //       this.lerClientes()
-  //       this.setItem()
-  //     },
-  //     error: () => {
-  //       console.log("erro fazer login");
-
-  //     }
-  //   })
-
-  // }
-
-  setItem(){
+  setItem() {
     console.log(this.cliente[(this.cliente.length) - 1]);
     const id = this.cliente[(this.cliente.length) - 1].id + 1;
     const email = this.form.controls["email"].value;
@@ -89,37 +70,28 @@ export class LoginComponent {
   }
 
   getItem() {
+    for (let usuario of this.cliente) {
+      if (usuario.email === this.form.controls["email"].value && usuario.senha === this.form.controls["senha"].value) {
+        const login = true
 
+        console.log("Login Concluido");
 
-    
-    const id = this.cliente[(this.cliente.length) - 1].id + 1;
-    const email = this.form.controls["email"].value;
-    const senha = this.form.controls["senha"].value;
+        this.LocalStorageService.set("id", usuario.id)
 
-    const cliente: CriarClientes = { id: id, email: email, senha: senha};
+        this.LocalStorageService.set("email", usuario.email)
 
-    const usuarios = this.cliente.filter(x => x.email === email && x.senha === senha);
+        this.LocalStorageService.set("senha", usuario.senha)
 
+        console.log(this.LocalStorageService.get("email"));
+        console.log(this.LocalStorageService.get("id"));
+        console.log(this.LocalStorageService.get("senha"));
 
+        return
+      }
 
-    const inputemail = localStorage.getItem(email);
-    const inputsenha = localStorage.getItem(senha);
-
-    if (email === inputemail) {
-      console.log("certo")
-      
     }
-    else {
-      console.log("erro")
-    }
-
-    if (senha === inputsenha) {
-      console.log("certo")
-    }
-    else {
-      console.log("erro")
-    }
-
+    this.erro
   }
 }
+
 
